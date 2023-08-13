@@ -20,6 +20,6 @@ repos:
         name: pytest
         stages: [push]
         language: system
-        entry: pytest --cov
+        entry: pytest
         types: [python]
         pass_filenames: false
