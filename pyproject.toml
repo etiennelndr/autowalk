@@ -1,0 +1,76 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "walker"
+version = "0.1.0"
+description = ""
+authors = ["Etienne Landuré <25793763+etiennelndr@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{ include = "walker", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+numpy = "1.25.2"
+typer = "0.9.0"
+torch = { version = "2.0.1", source = "pytorch-cuda118" }
+quart = "0.18.4"
+confuse = "2.0.1"
+uvicorn = {version = "0.23.2", extras = ["standard"]}
+loguru = "0.7.0"
+pydantic = "1.10.12"
+quart-schema = "0.16.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "23.7.0"
+ruff = "0.0.284"
+pre-commit = "3.3.3"
+pytest = "7.4.0"
+ipykernel = "^6.25.1"
+
+[tool.poetry.scripts]
+walker = "walker.__main__:main"
+
+[[tool.poetry.source]]
+name = "pytorch-cuda118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+select = ["E", "W", "F", "I", "PL"]
+ignore = []
+
+# Exclude a variety of commonly ignored directories
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black
+line-length = 100
+
+# Assume Python 3.10
+target-version = "py310"

@@ -1,0 +1,16 @@
+development:
+  port: 8000
+  host: 0.0.0.0
+  DEBUG: true
+
+  logging:
+    destination: null
+    level: DEBUG
+
+production:
+  port: 8008
+  host: 0.0.0.0
+
+  logging:
+    destination: null
+    level: INFO
