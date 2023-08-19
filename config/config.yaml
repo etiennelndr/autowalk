@@ -9,7 +9,7 @@ development:
 
   modules:
     training:
-      path: ./data/training_samples.json
+      path: training_samples.json
 
 production:
   port: 8008
