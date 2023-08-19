@@ -7,6 +7,10 @@ development:
     destination: null
     level: DEBUG
 
+  modules:
+    training:
+      path: ./data/training_samples.json
+
 production:
   port: 8008
   host: 0.0.0.0
@@ -14,3 +18,6 @@ production:
   logging:
     destination: null
     level: INFO
+
+  modules:
+    runtime: {}
