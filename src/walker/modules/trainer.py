@@ -35,6 +35,7 @@ def dump_states(path: Path, states: list[State]) -> None:
 
 
 class TrainerModule(Module):
+    path: Path | None
     states: list[State]
 
     def __init__(self, app: Quart | None = None, *, path: Path | None = None) -> None:
@@ -52,10 +53,20 @@ class TrainerModule(Module):
         else:
             logger.warning(
                 "Training states won't be saved on application shutdown. Restart the application by"
-                " providing a path to the training module"
+                " providing a path at module initialization"
             )
 
-        setattr(app, "states", self.states)
+        set_training_states(app, self.states)
 
 
-__all__ = ["TrainerModule"]
+def set_training_states(app: Quart, states: list[State]) -> None:
+    """Sets training states in an application."""
+    setattr(app, "states", states)
+
+
+def get_training_states(app: Quart) -> list[State]:
+    """Retrieves training states from an application."""
+    return getattr(app, "states")
+
+
+__all__ = ["TrainerModule", "get_training_states", "set_training_states"]
