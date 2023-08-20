@@ -1,3 +1,3 @@
 # Walker
 
-A bot capable of autonomous movement in random environments.
+An autonomous agent in unfamiliar environments.
