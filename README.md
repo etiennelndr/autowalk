@@ -1,3 +1,3 @@
 # Walker
 
-A server for 
+A bot capable of autonomous movement in random environments.

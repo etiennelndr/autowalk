@@ -4,6 +4,7 @@ from pathlib import Path
 
 from loguru import logger
 from quart import Quart
+
 from walker.bp.states import states_bp
 from walker.models.state import State
 

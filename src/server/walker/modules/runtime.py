@@ -1,4 +1,5 @@
 from quart import Quart
+
 from walker.bp.walks import walks_bp
 
 from ._base import Module

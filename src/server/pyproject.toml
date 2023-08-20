@@ -8,7 +8,6 @@ version = "0.1.0"
 description = ""
 authors = ["Etienne Landuré <25793763+etiennelndr@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{ include = "walker", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "~3.10"
