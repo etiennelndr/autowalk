@@ -560,6 +560,7 @@ GameObject:
   - component: {fileID: 1342037121}
   - component: {fileID: 1342037123}
   - component: {fileID: 1342037120}
+  - component: {fileID: 1342037124}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -649,6 +650,19 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342037119}
   m_Enabled: 1
+--- !u!114 &1342037124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342037119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd241ed1ad6f6f8428bd49f2d34c8576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameRate: 60
 --- !u!1 &1351987208
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +813,7 @@ GameObject:
   - component: {fileID: 1901197031}
   - component: {fileID: 1901197030}
   - component: {fileID: 1901197035}
-  - component: {fileID: 1901197034}
+  - component: {fileID: 1901197036}
   m_Layer: 0
   m_Name: Walker
   m_TagString: Untagged
@@ -895,28 +909,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1901197034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901197029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88973e7ddb944a143bf0a96ee3d0f060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  remainingDistanceTolerance: 0.5
-  points:
-  - {fileID: 1056816409}
-  - {fileID: 1284703523}
-  - {fileID: 168341679}
-  - {fileID: 172606278}
-  - {fileID: 1999915799}
-  - {fileID: 1351987209}
-  - {fileID: 518228967}
-  - {fileID: 1903267364}
 --- !u!195 &1901197035
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -939,6 +931,29 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1901197036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901197029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88973e7ddb944a143bf0a96ee3d0f060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remainingDistanceTolerance: 2
+  targetPoints:
+  - {fileID: 1056816409}
+  - {fileID: 1284703523}
+  - {fileID: 168341679}
+  - {fileID: 172606278}
+  - {fileID: 1999915799}
+  - {fileID: 1351987209}
+  - {fileID: 518228967}
+  - {fileID: 1903267364}
+  drawTargetPoints: 1
 --- !u!1 &1903267363
 GameObject:
   m_ObjectHideFlags: 0
