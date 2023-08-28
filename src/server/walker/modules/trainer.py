@@ -67,7 +67,13 @@ def set_training_states(app: Quart, states: list[State]) -> None:
 
 def get_training_states(app: Quart) -> list[State]:
     """Retrieves training states from an application."""
-    return getattr(app, "states")
+    try:
+        return getattr(app, "states")
+    except AttributeError:
+        raise RuntimeError(
+            "No training states found, application may not have been initialized with the trainer"
+            " module"
+        )
 
 
 __all__ = ["TrainerModule", "get_training_states", "set_training_states"]

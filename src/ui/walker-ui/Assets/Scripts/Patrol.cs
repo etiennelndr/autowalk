@@ -8,6 +8,9 @@ public class Patrol : MonoBehaviour {
     private NavMeshAgent agent;
 
     [SerializeField]
+    private string apiURL;
+
+    [SerializeField]
     private float remainingDistanceTolerance = 2f;
 
     [SerializeField]
@@ -33,6 +36,8 @@ public class Patrol : MonoBehaviour {
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
         agent.autoBraking = false;
+
+        Debug.Log("API URL: " + apiURL.GetType());
 
         UpdateTarget();
     }
