@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168341679}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 172606278}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518228967}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1056816409}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1104738872}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Targets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1284703523}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd241ed1ad6f6f8428bd49f2d34c8576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frameRate: 60
+  frameRate: 10
+  vSyncCount: 1
 --- !u!1 &1351987208
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1351987209}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +815,7 @@ GameObject:
   - component: {fileID: 1901197030}
   - component: {fileID: 1901197035}
   - component: {fileID: 1901197036}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Walker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +954,9 @@ MonoBehaviour:
   - {fileID: 1351987209}
   - {fileID: 518228967}
   - {fileID: 1903267364}
-  drawTargetPoints: 1
+  targetPointsVisible: 1
+  targetPointsHeight: 2.5
+  apiURL: 
 --- !u!1 &1903267363
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1903267364}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1999915799}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
