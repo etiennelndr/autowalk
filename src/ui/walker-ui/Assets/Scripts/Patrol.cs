@@ -19,9 +19,6 @@ public class Patrol : MonoBehaviour {
     [SerializeField]
     private float targetPointsHeight = 2.5f;
 
-    [SerializeField]
-    private string apiURL;
-
     private Vector3 currentTargetPoint;
     private Vector3 previousTargetPoint;
     private List<Vector3> nextTargetPoints;
