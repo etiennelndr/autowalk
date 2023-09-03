@@ -941,22 +941,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901197029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88973e7ddb944a143bf0a96ee3d0f060, type: 3}
+  m_Script: {fileID: 11500000, guid: c3c46afe7a7d21045968da92db2bd60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingDistanceTolerance: 2
-  targetPoints:
-  - {fileID: 1056816409}
-  - {fileID: 1284703523}
-  - {fileID: 168341679}
-  - {fileID: 172606278}
-  - {fileID: 1999915799}
-  - {fileID: 1351987209}
-  - {fileID: 518228967}
-  - {fileID: 1903267364}
-  targetPointsVisible: 1
-  targetPointsHeight: 2.5
-  apiURL: 
+  serverURL: 
+  behaviour: 0
+  trainingAgentConfig:
+    remainingDistanceTolerance: 2
+    targetPoints:
+      Positions:
+      - {fileID: 1056816409}
+      - {fileID: 1284703523}
+      - {fileID: 168341679}
+      - {fileID: 172606278}
+      - {fileID: 1999915799}
+      - {fileID: 1351987209}
+      - {fileID: 518228967}
+      - {fileID: 1903267364}
+      Visible: 0
+      Height: 2.5
+    serverURL: 
+  patrollingAgentConfig:
+    serverURL: 
 --- !u!1 &1903267363
 GameObject:
   m_ObjectHideFlags: 0
