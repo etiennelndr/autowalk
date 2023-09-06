@@ -958,7 +958,7 @@ MonoBehaviour:
       - {fileID: 1351987209}
       - {fileID: 518228967}
       - {fileID: 1903267364}
-      Visible: 0
+      Visible: 1
       Height: 2.5
     serverURL: 
   patrollingAgentConfig:

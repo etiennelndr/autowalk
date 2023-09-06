@@ -5,7 +5,6 @@ public enum Behaviour {
     TRAINING,
     PATROLLING
 }
-
 public class Walker : MonoBehaviour {
     [SerializeField]
     private string serverURL;

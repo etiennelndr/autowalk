@@ -3,7 +3,12 @@ using UnityEngine;
 public abstract class BaseAgentConfig {
 }
 
-public abstract class BaseAgent<C> where C: BaseAgentConfig {
+public abstract class BaseAgent {
+    public abstract void Init();
+    public abstract void Move();
+}
+
+public abstract class BaseAgent<C> : BaseAgent where C : BaseAgentConfig {
     protected C config;
     protected GameObject linkedGO;
 
@@ -11,8 +16,4 @@ public abstract class BaseAgent<C> where C: BaseAgentConfig {
         this.config = config;
         this.linkedGO = linkedGO;
     }
-
-    public abstract void Init();
-
-    public abstract void Move();
 }
