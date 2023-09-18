@@ -14,16 +14,14 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-numpy = "1.25.2"
 typer = "0.9.0"
+numpy = "1.25.2"
 torch = { version = "2.0.1", source = "pytorch-cuda118" }
 
 [tool.poetry.group.dev.dependencies]
 black = "23.9.1"
-ruff = "0.0.284"
-pre-commit = "3.3.3"
-pytest = "7.4.0"
-pytest-asyncio = "0.21.1"
+ruff = "0.0.290"
+pytest = "7.4.2"
 
 [tool.poetry.scripts]
 trainer = "walker.trainer.__main__:main"
