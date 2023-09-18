@@ -2,8 +2,8 @@ from loguru import logger
 from quart import Blueprint, websocket
 from quart_schema import validate_request, validate_response
 
-from walker.models.state import State
-from walker.models.walk import Walk
+from walker.server.models.state import State
+from walker.server.models.walk import Walk
 
 walks_bp = Blueprint(name="walks", import_name=__name__, url_prefix="/walks")
 

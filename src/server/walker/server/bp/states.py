@@ -1,8 +1,8 @@
 from quart import Blueprint, current_app
 from quart_schema import validate_request
 
-from walker.models.state import State
-from walker.modules import trainer as trainer_module
+from walker.server.models.state import State
+from walker.server.modules import trainer as trainer_module
 
 states_bp = Blueprint(name="states", import_name=__name__, url_prefix="/states")
 

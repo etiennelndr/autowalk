@@ -5,8 +5,8 @@ from pathlib import Path
 from loguru import logger
 from quart import Quart
 
-from walker.bp.states import states_bp
-from walker.models.state import State
+from walker.server.bp.states import states_bp
+from walker.server.models.state import State
 
 from ._base import Module
 
@@ -14,7 +14,7 @@ from ._base import Module
 def load_states(path: Path) -> list[State]:
     logger.info(f"Loading training states from '{path}'")
     if not path.exists():
-        logger.warning(f"No training file found at '{path}', skipping")
+        logger.warning(f"No training file found at '{path}', skipping loading")
         return []
 
     with open(path, mode="r", encoding="utf-8") as fstream:

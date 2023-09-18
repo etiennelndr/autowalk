@@ -10,8 +10,8 @@ from loguru import logger
 from quart import Quart
 from quart_schema import QuartSchema
 
-from walker.modules.runtime import RuntimeModule
-from walker.modules.trainer import TrainerModule
+from walker.server.modules.runtime import RuntimeModule
+from walker.server.modules.trainer import TrainerModule
 
 from . import attrs, config, logging
 from .logging import LoggingOptions

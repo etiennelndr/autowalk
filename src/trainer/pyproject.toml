@@ -3,24 +3,20 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "walker.server"
+name = "walker.trainer"
 version = "0.1.0"
 description = ""
 authors = ["Etienne Landuré <25793763+etiennelndr@users.noreply.github.com>"]
 readme = "README.md"
 packages = [
-    { include = "server", from = "walker" },
+    { include = "trainer", from = "walker" },
 ]
 
 [tool.poetry.dependencies]
-python = "~3.10"
+python = "^3.10"
+numpy = "1.25.2"
 typer = "0.9.0"
-quart = "0.18.4"
-confuse = "2.0.1"
-uvicorn = {version = "0.23.2", extras = ["standard"]}
-loguru = "0.7.0"
-pydantic = "1.10.12"
-quart-schema = "0.16.0"
+torch = { version = "2.0.1", source = "pytorch-cuda118" }
 
 [tool.poetry.group.dev.dependencies]
 black = "23.9.1"
@@ -30,7 +26,12 @@ pytest = "7.4.0"
 pytest-asyncio = "0.21.1"
 
 [tool.poetry.scripts]
-server = "walker.server.__main__:main"
+trainer = "walker.trainer.__main__:main"
+
+[[tool.poetry.source]]
+name = "pytorch-cuda118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
 
 [tool.black]
 line-length = 100

@@ -1,5 +1,5 @@
 repos:
-  - repo: local
+  - repo: https://github.com/astral-sh/ruff-pre-commit
     hooks:
       - id: ruff
         name: ruff
@@ -7,19 +7,15 @@ repos:
         language: system
         types: [python]
         entry: ruff
-        args: [--fix]
+        args: [--fix, --exit-non-zero-on-fix]
 
+  - repo:
+    hooks: https://github.com/psf/black-pre-commit-mirror
+    rev: 23.9.1
       - id: black
         name: black
         stages: [commit]
         language: system
         types: [python]
         entry: black
-
-      - id: pytest
-        name: pytest
-        stages: [push]
-        language: system
-        entry: pytest
-        types: [python]
-        pass_filenames: false
+        args: [--line-length, 100]
