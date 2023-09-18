@@ -11,7 +11,7 @@ import pytest
     ],
 )
 def test_server_help(cmd: list[str]):
-    ret = subprocess.run(cmd, capture_output=True)
+    ret = subprocess.run(cmd, capture_output=True, check=False)
     assert ret.returncode == 0
     ret_stdout = ret.stdout.decode()
     assert ret_stdout.startswith("Usage: walker [OPTIONS]")

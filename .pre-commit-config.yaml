@@ -1,22 +1,16 @@
+exclude: ^src/ui/
+fail_fast: true
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.0.290
     hooks:
-      - id: ruff
-        name: ruff
-        stages: [commit]
-        language: system
-        types: [python]
-        entry: ruff
-        args: [--fix, --exit-non-zero-on-fix]
+    - id: ruff
+      stages: [commit]
+      args: [--fix, --exit-non-zero-on-fix]
 
   - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 23.9.1
     hooks: 
-      - id: black
-        name: black
-        stages: [commit]
-        language: system
-        types: [python]
-        entry: black
-        args: [--line-length, "100"]
+    - id: black
+      stages: [commit]
+      args: [--line-length, "100"]
